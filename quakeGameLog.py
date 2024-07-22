@@ -62,9 +62,10 @@ def currentGame(lines):
 def main():
     lines = readLog()
     games = currentGame(lines)
-    json_object = json.dumps(games)
+    
     with open("gamedata.json", "w") as outfile:
-        outfile.write(json_object)
+        json.dump(games, outfile, indent=1)
+    
 
 
 if __name__ == "__main__":
