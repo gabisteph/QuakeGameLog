@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+</head>
+<body>
+    <h1>Report Quake Game Logs</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                {% for column in columns_tab1 %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data_tab1 %}
+            <tr>
+                {% for column in columns_tab1 %}
+                <td>{{ row[column] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Top 5</th>
+            </tr>
+            <tr>
+                {% for column in columns_tab2 %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data_tab2 %}
+            <tr>
+                {% for column in columns_tab2 %}
+                <td>{{ row[column] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
