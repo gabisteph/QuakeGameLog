@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Report</title>
+</head>
+    <style>
+        
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+        .titles{
+            text-align: center;
+            text-transform: uppercase;
+            color: #3f70c5;
+
+        }
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #3f70c5;
+            color: white;
+        }
+        .description {
+            width: 80%;
+            margin-right: 20%;
+            margin-left: 20%;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0b0c0e;
+        }
+        .description_title{
+            margin-left: 20%;
+            text-transform: uppercase;
+            color: #3f70c5;
+        }
+    </style>
+<body>
+    <h1 class="titles">Report Quake Game Logs</h1>
+    <h3 class="titles">Author: Gabrielle Stephanie Pires Mestrinho</h2>
+    <div class="flex-container">
+        <div>
+            <h3 class="titles"> Graph 1. The Best Players </h3>
+            <img src="assets/bar_chart.png"  width="700" height="700">
+        </div>
+        <div>
+
+        </div>
+        <div>
+            <h3 class="titles"> Table 1. Metrics of Matches </h3>
+            <table id="customers">
+                <thead>
+                    <tr>
+                        {% for column in columns_tab1 %}
+                        <th>{{ column }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data_tab1 %}
+                    <tr>
+                        {% for column in columns_tab1 %}
+                        <td>{{ row[column] }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div>
+            <h3 class="titles"> Table 2. Ranking The Best Players </h3>
+            <table id="customers">
+                <thead>
+                    <tr>
+                        <th colspan="{{ columns_tab3 | length }}">Top 5 best players</th>
+                    </tr>
+                    <tr>
+                        {% for column in columns_tab3 %}
+                        <th>{{ column }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data_tab3 %}
+                    <tr>
+                        {% for column in columns_tab3 %}
+                        <td>{{ row[column] }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h3 class="titles"> Table 3. The Score Of The Kill Players More Killed</h3>
+            <table id="customers">
+                <thead>
+                    <tr>
+                        <th colspan="{{ columns_tab2 | length }}">Top 5</th>
+                    </tr>
+                    <tr>
+                        {% for column in columns_tab2 %}
+                        <th>{{ column }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data_tab2 %}
+                    <tr>
+                        {% for column in columns_tab2 %}
+                        <td>{{ row[column] }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div >
+        <h1 class="description_title"> Descriptions</h1>
+        
+        <div class="description">
+        <p> Table 1: </p>
+        <p> 1. Game: This column lists the names or identifiers of the games. </p>
+        <p> 2. Total Kills: This column shows the total number of kills that occurred in each game.</p>
+        <p> 3. Numbers of Players: This column indicates the number of players who participated in each game.</p>
+        <p> 4. Best Player: This column identifies the player who had the best performance in terms of kills in each game.</p>
+        <p> 5. Player With Most Deaths: This column shows the player who had the most deaths in each game. </p>
+        <p> Table 2: </p>
+        <p> The best player was defined by surviving a match, that is,
+            dying less during all matches.
+            You can view the metrics via graph and table. </p>
+        <p> Table 3: </p>
+        <p> The player who killed the most was defined by the player who killed the most in all matches.
+            You can view the metrics via table. </p>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
