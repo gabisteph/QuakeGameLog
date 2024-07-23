@@ -8,7 +8,10 @@ Data Processing: Converts raw game data into a structured form.
 Death Analysis: Calculates total deaths and identifies the player with the most deaths in each game.
 Report generation: Generates DataFrames that can be used for further analysis or visualization.
 
-## Version
+##  Requirements
+Git
+A development environment
+Quake game log
 Python 3.10
 
 
@@ -19,6 +22,8 @@ pip install -r requirement.txt
 python3 exe.py || or run in VSCode
 
 ```
+## Report
+- [Report_Git_Pages](https://gabisteph.github.io/QuakeGameLog/report.html)
 ## Autores
 
 - [@gabisteh](https://www.github.com/gabisteph)
