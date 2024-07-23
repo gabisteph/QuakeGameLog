@@ -1,0 +1,227 @@
+[
+ {
+  "Game 1": {}
+ },
+ {
+  "Game 2": {
+   "kills_by_means": {
+    "MOD_TRIGGER_HURT\n": 6,
+    "MOD_ROCKET_SPLASH\n": 3,
+    "MOD_FALLING\n": 1
+   }
+  }
+ },
+ {
+  "Game 3": {
+   "kills_by_means": {
+    "MOD_TRIGGER_HURT\n": 2,
+    "MOD_FALLING\n": 1
+   }
+  }
+ },
+ {
+  "Game 4": {
+   "kills_by_means": {
+    "MOD_FALLING\n": 11,
+    "MOD_ROCKET\n": 20,
+    "MOD_RAILGUN\n": 8,
+    "MOD_TRIGGER_HURT\n": 8,
+    "MOD_ROCKET_SPLASH\n": 51,
+    "MOD_MACHINEGUN\n": 4,
+    "MOD_SHOTGUN\n": 2
+   }
+  }
+ },
+ {
+  "Game 5": {
+   "kills_by_means": {
+    "MOD_ROCKET_SPLASH\n": 4,
+    "MOD_TRIGGER_HURT\n": 5,
+    "MOD_RAILGUN\n": 1,
+    "MOD_ROCKET\n": 3
+   }
+  }
+ },
+ {
+  "Game 6": {
+   "kills_by_means": {
+    "MOD_RAILGUN\n": 2,
+    "MOD_ROCKET\n": 4,
+    "MOD_SHOTGUN\n": 4,
+    "MOD_ROCKET_SPLASH\n": 13,
+    "MOD_TRIGGER_HURT\n": 3,
+    "MOD_FALLING\n": 1,
+    "MOD_MACHINEGUN\n": 1
+   }
+  }
+ },
+ {
+  "Game 7": {
+   "kills_by_means": {
+    "MOD_TRIGGER_HURT\n": 20,
+    "MOD_ROCKET_SPLASH\n": 49,
+    "MOD_ROCKET\n": 29,
+    "MOD_SHOTGUN\n": 7,
+    "MOD_RAILGUN\n": 9,
+    "MOD_FALLING\n": 6,
+    "MOD_MACHINEGUN\n": 9
+   }
+  }
+ },
+ {
+  "Game 8": {
+   "kills_by_means": {
+    "MOD_ROCKET\n": 18,
+    "MOD_ROCKET_SPLASH\n": 39,
+    "MOD_FALLING\n": 6,
+    "MOD_RAILGUN\n": 12,
+    "MOD_TRIGGER_HURT\n": 8,
+    "MOD_MACHINEGUN\n": 4,
+    "MOD_SHOTGUN\n": 1
+   }
+  }
+ },
+ {
+  "Game 9": {
+   "kills_by_means": {
+    "MOD_ROCKET_SPLASH\n": 25,
+    "MOD_SHOTGUN\n": 1,
+    "MOD_ROCKET\n": 17,
+    "MOD_MACHINEGUN\n": 3,
+    "MOD_FALLING\n": 3,
+    "MOD_TRIGGER_HURT\n": 7,
+    "MOD_RAILGUN\n": 10
+   }
+  }
+ },
+ {
+  "Game 10": {
+   "kills_by_means": {
+    "MOD_TELEFRAG\n": 24,
+    "MOD_TRIGGER_HURT\n": 17,
+    "MOD_ROCKET\n": 4,
+    "MOD_ROCKET_SPLASH\n": 1,
+    "MOD_RAILGUN\n": 7,
+    "MOD_BFG_SPLASH\n": 2,
+    "MOD_BFG\n": 2,
+    "MOD_MACHINEGUN\n": 1,
+    "MOD_CRUSH\n": 1
+   }
+  }
+ },
+ {
+  "Game 11": {
+   "kills_by_means": {
+    "MOD_TRIGGER_HURT\n": 6,
+    "MOD_CRUSH\n": 1,
+    "MOD_ROCKET_SPLASH\n": 4,
+    "MOD_BFG_SPLASH\n": 3,
+    "MOD_MACHINEGUN\n": 1,
+    "MOD_RAILGUN\n": 4
+   }
+  }
+ },
+ {
+  "Game 12": {
+   "kills_by_means": {
+    "MOD_RAILGUN\n": 38,
+    "MOD_TRIGGER_HURT\n": 36,
+    "MOD_ROCKET_SPLASH\n": 35,
+    "MOD_BFG_SPLASH\n": 8,
+    "MOD_ROCKET\n": 25,
+    "MOD_MACHINEGUN\n": 7,
+    "MOD_BFG\n": 8,
+    "MOD_FALLING\n": 2
+   }
+  }
+ },
+ {
+  "Game 13": {
+   "kills_by_means": {
+    "MOD_ROCKET\n": 1,
+    "MOD_TRIGGER_HURT\n": 1,
+    "MOD_ROCKET_SPLASH\n": 1,
+    "MOD_BFG_SPLASH\n": 1,
+    "MOD_BFG\n": 1
+   }
+  }
+ },
+ {
+  "Game 14": {
+   "kills_by_means": {
+    "MOD_RAILGUN\n": 19,
+    "MOD_TRIGGER_HURT\n": 31,
+    "MOD_ROCKET\n": 23,
+    "MOD_ROCKET_SPLASH\n": 24,
+    "MOD_MACHINEGUN\n": 4,
+    "MOD_BFG_SPLASH\n": 10,
+    "MOD_FALLING\n": 5,
+    "MOD_BFG\n": 5
+   }
+  }
+ },
+ {
+  "Game 15": {
+   "kills_by_means": {
+    "MOD_TRIGGER_HURT\n": 2
+   }
+  }
+ },
+ {
+  "Game 16": {}
+ },
+ {
+  "Game 17": {
+   "kills_by_means": {
+    "MOD_TRIGGER_HURT\n": 6,
+    "MOD_FALLING\n": 2,
+    "MOD_RAILGUN\n": 2,
+    "MOD_ROCKET_SPLASH\n": 2
+   }
+  }
+ },
+ {
+  "Game 18": {
+   "kills_by_means": {
+    "MOD_ROCKET_SPLASH\n": 3,
+    "MOD_ROCKET\n": 1,
+    "MOD_FALLING\n": 1,
+    "MOD_TRIGGER_HURT\n": 1
+   }
+  }
+ },
+ {
+  "Game 19": {
+   "kills_by_means": {
+    "MOD_ROCKET\n": 27,
+    "MOD_ROCKET_SPLASH\n": 32,
+    "MOD_SHOTGUN\n": 6,
+    "MOD_TRIGGER_HURT\n": 11,
+    "MOD_RAILGUN\n": 10,
+    "MOD_MACHINEGUN\n": 7,
+    "MOD_FALLING\n": 1
+   }
+  }
+ },
+ {
+  "Game 20": {
+   "kills_by_means": {
+    "MOD_ROCKET_SPLASH\n": 1,
+    "MOD_ROCKET\n": 1
+   }
+  }
+ },
+ {
+  "Game 21": {
+   "kills_by_means": {
+    "MOD_TRIGGER_HURT\n": 14,
+    "MOD_ROCKET\n": 36,
+    "MOD_RAILGUN\n": 9,
+    "MOD_ROCKET_SPLASH\n": 60,
+    "MOD_MACHINEGUN\n": 4,
+    "MOD_SHOTGUN\n": 4,
+    "MOD_FALLING\n": 3
+   }
+  }
+ }
+]

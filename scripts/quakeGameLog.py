@@ -24,13 +24,18 @@ def currentGame(lines):
     gameMatchs (list): A list of dictionaries containing information about each game.
     """
     gameMatchs = []
+    deathMatchs = []
+    allDeaths = {}
+    meansDeaths = {}
     currentGame = {}
     game = 0
     for line in lines:
         if re.search(r'InitGame', line):
             game += 1
             currentGame = {"Game " + str(game): {}}
+            meansDeaths = {"Game " + str(game): {}}
             gameMatchs.append(currentGame)
+            deathMatchs.append(meansDeaths)
         if re.search(r'ClientUserinfoChanged', line):
             piece = line.split('n\\')
             if len(piece) > 1:
@@ -67,9 +72,22 @@ def currentGame(lines):
                         currentGame["Game " + str(game)]["kills"][namekill] += 1
                     else:
                         currentGame["Game " + str(game)]["kills"][namekill] -= 1
+                cause = line.split('by ')
+                if len(cause) > 1:
+                    kindDeath = cause[1].split(' by')[0]
+                if "kills_by_means" not in meansDeaths["Game " + str(game)]:
+                    meansDeaths["Game " + str(game)]["kills_by_means"] = {}
+                    meansDeaths["Game " + str(game)]["kills_by_means"][kindDeath] = 1
+                else:
+                    if kindDeath not in meansDeaths["Game " + str(game)]["kills_by_means"]:
+                        meansDeaths["Game " + str(game)]["kills_by_means"][kindDeath] = 1
+                    else:
+                        meansDeaths["Game " + str(game)]["kills_by_means"][kindDeath] += 1
             
+    
+    return gameMatchs, deathMatchs
 
-    return gameMatchs
+
 
 
 def main():
@@ -77,11 +95,12 @@ def main():
     Reads the log file, processes the game data, and saves it to a JSON file.
     """
     lines = readLog()
-    games = currentGame(lines)
+    gameMatchs, meansDeaths = currentGame(lines)
 
     with open("gamedata.json", "w") as outfile:
-        json.dump(games, outfile, indent=1)
-
+        json.dump(gameMatchs, outfile, indent=1)
+    with open("deathMatches.json", "w") as outfile:
+        json.dump(meansDeaths, outfile, indent=1)
 
 if __name__ == "__main__":
     main()

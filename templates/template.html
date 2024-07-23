@@ -134,6 +134,30 @@
                 </tbody>
             </table>
         </div>
+        <div>
+            <h3 class="titles"> Table Deaths. Deaths Matches</h3>
+            <table id="customers">
+                <thead>
+                    <tr>
+                        <th colspan="{{ columns_tab4 | length }}"> Deaths of Means </th>
+                    </tr>
+                    <tr>
+                        {% for column in columns_tab4 %}
+                        <th>{{ column }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data_tab4 %}
+                    <tr>
+                        {% for column in columns_tab4 %}
+                        <td>{{ row[column] }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
     <div >
         <h1 class="description_title"> Descriptions</h1>

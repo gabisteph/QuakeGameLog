@@ -25,10 +25,11 @@ def generate_summary_report():
     None
     """
     # read gamedata JSON
-    with open('gamedata.json', 'r', encoding='utf-8') as f:
+    with open('gamedata.json', 'r') as f:
         games = json.load(f)
-
-    # Format the data for the DataFrame
+    with open('deathMatches.json', 'r') as f:
+        deaths = json.load(f)
+    # Format the data for the DataFrame gamedata
     records = []
     for game in games:
         game_name, details = list(game.items())[0]
@@ -39,12 +40,24 @@ def generate_summary_report():
             "Kills": details.get("kills", {})
         }
         records.append(record)
+    # Format the data for the DataFrame deathdata
+    deaths_temp = []
+    for death in deaths:
+        valuegame, details = list(death.items())[0]
+        death = {
+            "Game": valuegame,
+            "kills_by_means": details.get("deaths", {})
+        }
+        deaths_temp.append(death)
 
-    # Create a DataFrame
+    # Create a DataFrame gamedata
     df = pd.DataFrame(records)
     # Matrix of the DataFrame
     matriz = df.values
-
+    # Create a DataFrame deathdata
+    df4 = pd.DataFrame(deaths)
+    # Matrix of the DataFrame
+    matriz2 = df4.values
     # Construct table 1
     dict_tab1 = {
         "Game": [],
@@ -68,10 +81,11 @@ def generate_summary_report():
         else:
             dict_tab1["Best Player"].append(0)
             dict_tab1["Player Witch Most Deaths"].append(0)
-
+    
     # Create table 1
     df_tab1 = pd.DataFrame(dict_tab1).set_index("Game").reset_index()
-
+    # Create table deaths
+    df_tabDeaths = pd.DataFrame(df4)
     # filter players and number of matchs
     dict_players = {}
     for line in matriz:
@@ -125,14 +139,16 @@ def generate_summary_report():
     # Define the data tab 2 for the template
     columns_tab3 = df_tab3.columns.tolist()
     data_tab3 = df_tab3.to_dict(orient='records')
-    players = df_tab3["Players"].tolist()
-    kills = df_tab3["Number of Kills all Matchs"].tolist()
+    
+    # Define the data tab deaths for the template
+    columns_tab4 = df_tabDeaths.columns.tolist()
+    data_tab4 = df_tabDeaths.to_dict(orient='records')
 
     # Render the template with the data
     html_output = template.render(columns_tab1=columns_tab1, data_tab1=data_tab1, 
                                   columns_tab2=columns_tab2, data_tab2=data_tab2,
                                   columns_tab3=columns_tab3, data_tab3=data_tab3,
-                                  players=players, kills=kills)
+                                  columns_tab4=columns_tab4, data_tab4=data_tab4)
 
     # Save the rendered HTML to a file
     with open('templates/report.html', 'w') as f:
